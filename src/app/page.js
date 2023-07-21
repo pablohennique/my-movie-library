@@ -1,18 +1,37 @@
 export default function HomePage() {
+  const appTitle = 'My Movie Library'
+  const displayTitle = true
+  const uppercaseTitle = false
+  const uppercaseTernary = uppercaseTitle ? appTitle.toUpperCase() : appTitle
+
+  const movies = [
+    { id: 0, featured: true, title: 'Indiana Jones and the Dial of Destiny' },
+    { id: 1, featured: true, title: 'Guardians of the Galaxy Vol. 3' },
+    { id: 2, featured: false, title: 'Mission: Impossible - Dead Reckoning Part One' },
+    { id: 3, featured: false, title: 'Spider-Man: Across the Spider-Verse' },
+    { id: 4, featured: false, title: 'The Super Mario Bros. Movie' },
+  ]
+  const moviesJSX = movies.map((movie) => <li key={movie.id} className={movie.featured && "featured"}>{movie.title}</li>)
+
+  const domain = 'www.themoviedb.org'
+  const hasMoreMovies = true
+
   return (
-    <main>
-      <h1>My Movie Library</h1>
-      <p>Here is a list of popular movies:</p>
-      <ul>
-        <li>Indiana Jones and the Dial of Destiny</li>
-        <li>Guardians of the Galaxy Vol. 3</li>
-        <li>Mission: Impossible - Dead Reckoning Part One</li>
-        <li>Spider-Man: Across the Spider-Verse</li>
-        <li>The Super Mario Bros. Movie</li>
-      </ul>
-      <p>
-        <a href="https://www.themoviedb.org/">See more</a>
-      </p>
-    </main>
+    <>
+      <main>
+        <h1>{displayTitle && uppercaseTernary}</h1>
+        <h2>The best ever</h2>
+      </main>
+
+      <body>
+        <p>Here is a list of popular movies:</p>
+        <ul className="movie-list">
+          {moviesJSX}
+        </ul>
+        <p>
+          {hasMoreMovies && <a href={`https://${domain}/`}>See more</a>}
+        </p>
+      </body>
+    </>
   )
 }
