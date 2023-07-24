@@ -1,4 +1,6 @@
 export default function HomePage() {
+  const domain = 'www.themoviedb.org'
+  const hasMoreMovies = true
   const appTitle = 'My Movie Library'
   const displayTitle = true
   const uppercaseTitle = false
@@ -12,17 +14,9 @@ export default function HomePage() {
     { id: 4, featured: false, title: 'The Super Mario Bros. Movie' },
   ]
   const moviesJSX = movies.map((movie) => <li key={movie.id} className={movie.featured && "featured"}>{movie.title}</li>)
-
-  const domain = 'www.themoviedb.org'
-  const hasMoreMovies = true
-
-  return (
-    <>
-      <main>
-        <h1>{displayTitle && uppercaseTernary}</h1>
-        <h2>The best ever</h2>
-      </main>
-
+  let moviesBlock
+  if (movies.length > 0) {
+    moviesBlock = (
       <body>
         <p>Here is a list of popular movies:</p>
         <ul className="movie-list">
@@ -32,6 +26,19 @@ export default function HomePage() {
           {hasMoreMovies && <a href={`https://${domain}/`}>See more</a>}
         </p>
       </body>
+      )
+  } else {
+    moviesBlock = "No movies available at the moment"
+  }
+
+  return (
+    <>
+      <main>
+        <h1>{displayTitle && uppercaseTernary}</h1>
+        <h2>The best ever</h2>
+      </main>
+
+      {moviesBlock}
     </>
   )
 }
