@@ -1,3 +1,6 @@
+import { MovieList } from '../components/movie-list'
+import { PeopleList } from '../components/people-list'
+
 export default function HomePage() {
   const domain = 'www.themoviedb.org'
   const hasMoreMovies = true
@@ -13,32 +16,29 @@ export default function HomePage() {
     { id: 3, featured: false, title: 'Spider-Man: Across the Spider-Verse' },
     { id: 4, featured: false, title: 'The Super Mario Bros. Movie' },
   ]
-  const moviesJSX = movies.map((movie) => <li key={movie.id} className={movie.featured && "featured"}>{movie.title}</li>)
-  let moviesBlock
-  if (movies.length > 0) {
-    moviesBlock = (
-      <body>
-        <p>Here is a list of popular movies:</p>
-        <ul className="movie-list">
-          {moviesJSX}
-        </ul>
-        <p>
-          {hasMoreMovies && <a href={`https://${domain}/`}>See more</a>}
-        </p>
-      </body>
-      )
-  } else {
-    moviesBlock = "No movies available at the moment"
-  }
+
+  const people = [
+    { id: 0, name: 'Gabriel Guevara' },
+    { id: 1, name: 'Gary Coleman' },
+    { id: 2, name: 'Angeli Khang' },
+    { id: 3, name: 'Katherine LaNasa' },
+    { id: 4, name: 'Rebecca Ferguson' },
+  ]
 
   return (
-    <>
       <main>
         <h1>{displayTitle && uppercaseTernary}</h1>
         <h2>The best ever</h2>
-      </main>
 
-      {moviesBlock}
-    </>
+        <p>Here is a list of popular movies:</p>
+
+        <MovieList movies={movies} />
+
+        <p>
+          {hasMoreMovies && <a href={`https://${domain}/`}>See more</a>}
+        </p>
+
+        <PeopleList people={people} />
+      </main>
   )
 }
