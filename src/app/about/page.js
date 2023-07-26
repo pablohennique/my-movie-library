@@ -1,16 +1,14 @@
-import Link from 'next/link'
+import { NavMenu } from '../../components/nav-menu'
 
 export const metadata = {
-  title: 'About My Movie Library',
+  title: 'About',
   description: 'Learn more about My Movie Library',
 }
 
 export default function AboutPage() {
   return (
     <main>
-      <p>
-        <Link href="/">Home</Link>
-      </p>
+      <NavMenu />
       <h1>About</h1>
       <p>This app was created with React and Next.js</p>
     </main>
