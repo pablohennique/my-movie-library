@@ -1,12 +1,4 @@
-.movie-list {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: 350px;
-}
-
-.movie-list li {
+.movieListItem {
   list-style: none;
   border: 1px solid lightgray;
   border-radius: 8px;
@@ -17,6 +9,6 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 10%);
 }
 
-.movie-list li.featured {
+.featured {
   font-weight: bold;
 }

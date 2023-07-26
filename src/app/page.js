@@ -1,5 +1,6 @@
 import { MovieList } from '../components/movie-list'
 import { PeopleList } from '../components/people-list'
+import Link from 'next/link'
 
 export default function HomePage() {
   const domain = 'www.themoviedb.org'
@@ -27,6 +28,9 @@ export default function HomePage() {
 
   return (
       <main>
+        <p>
+          <Link href="/about">About</Link>
+        </p>
         <h1>{displayTitle && uppercaseTernary}</h1>
         <h2>The best ever</h2>
 
