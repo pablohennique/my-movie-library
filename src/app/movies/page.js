@@ -1,5 +1,4 @@
 import { MovieList } from '../../components/movie-list'
-import { NavMenu } from '../../components/nav-menu'
 
 export const metadata = {
   title: 'My Movies',
@@ -20,8 +19,6 @@ export default function Movies() {
 
   return (
     <main>
-      <NavMenu />
-
       <h1>Movies</h1>
 
       <p>Here is a list of popular movies:</p>

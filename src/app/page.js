@@ -1,4 +1,4 @@
-import { NavMenu } from '../components/nav-menu'
+import Link from 'next/link'
 
 export default function HomePage() {
   const appTitle = 'My Movie Library'
@@ -7,10 +7,12 @@ export default function HomePage() {
   const uppercaseTernary = uppercaseTitle ? appTitle.toUpperCase() : appTitle
 
   return (
-      <main>
-        <NavMenu />
+      <>
         <h1>{displayTitle && uppercaseTernary}</h1>
         <h2>The best ever</h2>
-      </main>
+        <p>
+          Welcome! Have a look at the <Link href="/movies">popular movies</Link>.
+        </p>
+      </>
   )
 }

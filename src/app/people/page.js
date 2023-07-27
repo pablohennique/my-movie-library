@@ -1,4 +1,3 @@
-import { NavMenu } from '../../components/nav-menu'
 import { PeopleList } from '../../components/people-list'
 
 export const metadata = {
@@ -17,7 +16,6 @@ export default function People() {
 
   return (
     <main>
-      <NavMenu />
       <h1>People Involved</h1>
       <h2>Here are the names of some people who worked in the movies:</h2>
       <PeopleList people={people} />

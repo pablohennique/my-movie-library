@@ -1,5 +1,15 @@
-.navBar {
+.navMenu ul {
   display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.navMenu li {
   list-style-type: none;
-  gap: 5px;
+}
+
+.navMenu li a {
+  text-decoration: none;
 }
