@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Some people who worked in the movies',
 }
 
-export default function People() {
+export default function PeoplePage() {
   const people = [
     { id: 0, name: 'Gabriel Guevara' },
     { id: 1, name: 'Gary Coleman' },

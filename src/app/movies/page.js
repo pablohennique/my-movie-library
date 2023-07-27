@@ -1,11 +1,12 @@
 import { MovieList } from '../../components/movie-list'
+import { fetchPopularMovies } from '../../lib/tmdb'
 
 export const metadata = {
   title: 'My Movies',
   description: 'See your movie list',
 }
 
-export default function Movies() {
+export default async function MoviesPage() {
   const domain = 'www.themoviedb.org'
   const hasMoreMovies = true
 
