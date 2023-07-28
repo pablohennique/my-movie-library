@@ -15,10 +15,10 @@ export default function PeoplePage() {
   ]
 
   return (
-    <main>
+    <>
       <h1>People Involved</h1>
       <h2>Here are the names of some people who worked in the movies:</h2>
       <PeopleList people={people} />
-    </main>
+    </>
   )
 }
