@@ -9,8 +9,9 @@ export const metadata = {
 export default async function MoviesPage() {
   const domain = 'www.themoviedb.org'
   const hasMoreMovies = true
+
   const moviesObject = await fetchPopularMovies()
-  const movies = moviesObject.movies
+  const movies = moviesObject.content
   const callSuccess = moviesObject.success
   const error = moviesObject.error
 
