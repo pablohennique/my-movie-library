@@ -9,7 +9,10 @@ export const metadata = {
 export default async function MoviesPage() {
   const domain = 'www.themoviedb.org'
   const hasMoreMovies = true
-  const movies = await fetchPopularMovies()
+  const moviesObject = await fetchPopularMovies()
+  const movies = moviesObject.movies
+  const callSuccess = moviesObject.success
+  const error = moviesObject.error
 
   // const movies = [
   //   { id: 0, featured: true, title: 'Indiana Jones and the Dial of Destiny' },
@@ -25,10 +28,10 @@ export default async function MoviesPage() {
 
       <p>Here is a list of popular movies:</p>
 
-      {movies !== null ? (
+      {callSuccess ? (
         <MovieList movies={movies} />
       ) : (
-        <p>An error has occurred 🙁</p>
+        <p>{`Error: ${error}`}</p>
       )}
 
       <p>
