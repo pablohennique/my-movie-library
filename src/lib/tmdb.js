@@ -27,3 +27,21 @@ export async function fetchPopular(url) {
     return { content: null, success: false, error: "API could not be reached" }
   }
 }
+
+export async function fetchMovie(movieId) {
+  const apiKey = process.env.TMDB_API_KEY
+  const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`
+  try {
+    const res = await fetch(url)
+
+    if (res.status !== 200) {
+      return null
+    }
+
+    const data = await res.json()
+    return data
+  } catch(err) {
+    console.error(err)
+    return null
+  }
+}
