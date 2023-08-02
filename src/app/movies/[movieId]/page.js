@@ -20,3 +20,11 @@ export default async function MoviePage({ params }) {
     </>
   )
 }
+
+export async function generateMetadata({ params }) {
+  const movie = await fetchMovie(params.movieId)
+  if (!movie) {
+    return { title: 'Movie not found' }
+  }
+  return { title: movie.title}
+}
