@@ -1,13 +1,32 @@
 h1 {
-  color: #be123c;
+  color: #272E3F;
 }
 
 a {
   color: #0891b2;
+  text-decoration: none;
+}
+
+h2 {
+  color: #64748B;
 }
 
 .container {
   margin: 30px;
   /* border: 1px solid red; */
   /* margin: 0 auto; */
+}
+
+.button {
+    text-decoration: none;
+    color: #F8F8F8;
+    background-color: #305b96;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+
 }

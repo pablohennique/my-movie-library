@@ -1,7 +1,15 @@
 .movieList {
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: 350px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  /* display: flex;
+  flex-direction: column; */
+  /* max-width: 350px; */
+}
+
+@media (max-width: 768px) {
+  .movieList {
+    grid-template-columns: 1fr;
+  }
 }

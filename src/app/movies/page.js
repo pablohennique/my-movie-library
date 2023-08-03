@@ -36,7 +36,7 @@ export default async function MoviesPage() {
       )}
 
       <p>
-        {hasMoreMovies && <a href={`https://${domain}/`}>See more</a>}
+        {hasMoreMovies && <a href={`https://${domain}/`} className="button">See more</a>}
       </p>
     </>
   )
