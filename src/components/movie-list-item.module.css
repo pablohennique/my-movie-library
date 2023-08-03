@@ -7,6 +7,18 @@
   text-overflow: ellipsis;
   padding: 16px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 10%);
+  background-color: #f8f8f8;
+}
+
+.clickable {
+  text-decoration: none;
+  color: black;
+  /* transition: box-shadow 0.3s ease; */
+}
+
+.clickable:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
 }
 
 .featured {

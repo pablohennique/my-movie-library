@@ -1,5 +1,7 @@
+import styles from './people-list-item.module.css'
+
 export function PeopleListItem({ person }) {
   return (
-    <li>{person.name}</li>
+    <li className={styles.peopleListItem}>{person.name}</li>
   )
 }

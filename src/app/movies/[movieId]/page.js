@@ -1,4 +1,5 @@
 import { fetchMovie } from '../../../lib/tmdb'
+import styles from './page.module.css'
 
 export default async function MoviePage({ params }) {
   const movie = await fetchMovie(params.movieId)
@@ -15,8 +16,13 @@ export default async function MoviePage({ params }) {
         <p>
           <em>{movie.tagline}</em>
         </p>
-        <h3>Overview</h3>
-        <p>{movie.overview}</p>
+        <div className={styles.containerOverviewPoster}>
+          <div className={styles.overview}>
+            <h3>Overview</h3>
+            <p>{movie.overview}</p>
+          </div>
+            <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}></img>
+        </div>
     </>
   )
 }

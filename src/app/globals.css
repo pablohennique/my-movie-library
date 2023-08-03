@@ -5,3 +5,9 @@ h1 {
 a {
   color: #0891b2;
 }
+
+.container {
+  margin: 30px;
+  /* border: 1px solid red; */
+  /* margin: 0 auto; */
+}

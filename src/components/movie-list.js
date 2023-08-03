@@ -3,7 +3,7 @@ import styles from './movie-list.module.css'
 
 export function MovieList({ movies }) {
   return (
-      <ul className={`${styles.movieList}`}>
+      <ul className={`${styles.movieList} container`}>
         {movies.map((movie) =>
           <MovieListItem key={movie.id} movie={movie} />
         )}

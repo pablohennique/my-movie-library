@@ -27,7 +27,7 @@ export default async function MoviesPage() {
     <>
       <h1>Popular Movies</h1>
 
-      <p>Here is a list of popular movies:</p>
+      <h2>Here is a list of popular movies:</h2>
 
       {callSuccess ? (
         <MovieList movies={movies} />

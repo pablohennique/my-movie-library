@@ -1,0 +1,8 @@
+.overview {
+  display: block;
+  margin: 50px;
+}
+
+.containerOverviewPoster {
+  display: flex;
+}

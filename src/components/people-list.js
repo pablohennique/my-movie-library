@@ -3,7 +3,7 @@ import styles from './people-list.module.css'
 
 export function PeopleList({ people }) {
   return (
-    <ul className={styles.peopleList}>
+    <ul className={`${styles.peopleList} container`}>
       {people.map((person) =>
         <PeopleListItem key={person.id} person={person} />
         )
