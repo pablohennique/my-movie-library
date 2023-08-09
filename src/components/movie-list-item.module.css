@@ -1,13 +1,20 @@
 .movieListItem {
+  display: flex;
+  align-items: center;
   list-style: none;
   border: 1px solid lightgray;
   border-radius: 8px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 16px;
+  /* padding: 16px; */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 10%);
   background-color: #f8f8f8;
+  width: 500px;
+}
+
+.movieListItem p {
+  padding-left: 20px;
 }
 
 .clickable {
@@ -23,4 +30,9 @@
 
 .featured {
   font-weight: bold;
+}
+
+.poster {
+  width: 75px;
+  border-radius: 5px;
 }

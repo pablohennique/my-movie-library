@@ -35,13 +35,13 @@ export async function fetchMovie(movieId) {
     const res = await fetch(url)
 
     if (res.status !== 200) {
-      return null
+      return { content: null, success: false, error: "There was a problem with the API response" }
     }
 
     const data = await res.json()
-    return data
+    return { content: data, success: true, error: null }
   } catch(err) {
     console.error(err)
-    return null
+    return { content: null, success: false, error: "API could not be reached" }
   }
 }

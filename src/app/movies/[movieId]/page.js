@@ -2,10 +2,12 @@ import { fetchMovie } from '../../../lib/tmdb'
 import styles from './page.module.css'
 
 export default async function MoviePage({ params }) {
-  const movie = await fetchMovie(params.movieId)
+  const apiResponse = await fetchMovie(params.movieId)
+  const movie = apiResponse.content
+  const error = apiResponse.error
 
-  if (!movie) {
-    return <p>Movie not found</p>
+  if (movie === null) {
+    return <p>{error}</p>
   }
 
   return (
@@ -21,7 +23,7 @@ export default async function MoviePage({ params }) {
             <h3>Overview</h3>
             <p>{movie.overview}</p>
           </div>
-            <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}></img>
+            <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} className={styles.poster}></img>
         </div>
     </>
   )
