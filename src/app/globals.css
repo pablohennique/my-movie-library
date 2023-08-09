@@ -33,3 +33,14 @@ h2 {
 .welcomeBanner {
   width: 100%;
 }
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+body.dark h1 {
+  color: #f87171;
+}
+body.dark a {
+  color: #7dd3fc;
+}

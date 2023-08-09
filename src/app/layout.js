@@ -3,6 +3,7 @@ import './globals.css'
 import styles from './layout.module.css'
 import { Inter } from 'next/font/google'
 import { NavMenu } from '../components/nav-menu'
+import { ThemeSwitch } from '@/components/theme-switch'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} ${styles.rootLayout}`}>
         <header>
           <NavMenu />
+          <ThemeSwitch />
         </header>
 
         <main>{children}</main>
