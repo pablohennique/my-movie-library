@@ -1,13 +1,14 @@
 import { fetchMovie } from '../../../lib/tmdb'
+import { notFound } from 'next/navigation'
 import styles from './page.module.css'
 
 export default async function MoviePage({ params }) {
   const apiResponse = await fetchMovie(params.movieId)
   const movie = apiResponse.content
-  const error = apiResponse.error
+  // const error = apiResponse.error
 
   if (movie === null) {
-    return <p>{error}</p>
+    notFound()
   }
 
   return (
