@@ -17,10 +17,18 @@
   padding-left: 20px;
 }
 
+:global(.dark) .movieListItem {
+  background: none;
+}
+
 .clickable {
   text-decoration: none;
   color: black;
   /* transition: box-shadow 0.3s ease; */
+}
+
+:global(.dark) .clickable {
+  color: whitesmoke;
 }
 
 .clickable:hover {

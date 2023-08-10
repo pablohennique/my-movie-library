@@ -38,9 +38,19 @@ body.dark {
   background-color: black;
   color: white;
 }
+
 body.dark h1 {
   color: #f87171;
 }
+
+body.dark h2 {
+  color: whitesmoke;
+}
+
 body.dark a {
   color: #7dd3fc;
+}
+
+.hidden {
+  display: none;
 }

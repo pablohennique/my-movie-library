@@ -16,3 +16,7 @@
   text-decoration: none;
   color: #305b96;
 }
+
+:global(.dark) .navMenu li a {
+  color: white;
+}

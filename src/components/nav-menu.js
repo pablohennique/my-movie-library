@@ -12,7 +12,7 @@ export function NavMenu() {
         <li>
           <Link href='/movies'>Movies</Link>
         </li>
-        <li>
+        <li className='hidden'>
           <Link href='/people'>People</Link>
         </li>
         <li>

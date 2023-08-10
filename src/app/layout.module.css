@@ -29,3 +29,7 @@
   border-top: 1px solid lightgray;
   padding: 12px;
 }
+
+:global(.dark).rootLayout > main {
+  background-color: #0C1223;
+}
