@@ -1,20 +1,32 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import styles from './page.module.css'
 
 export default function HomePage() {
-  const appTitle = 'My Movie Library'
+  const appTitle = 'Welcome To The Movie Library'
   const displayTitle = true
   const uppercaseTitle = false
   const uppercaseTernary = uppercaseTitle ? appTitle.toUpperCase() : appTitle
 
   return (
       <>
-        <h1>{displayTitle && uppercaseTernary}</h1>
-        <h2>The best ever</h2>
-        <p>
-          Welcome! Have a look at the <Link href="/movies">popular movies</Link>.
-        </p>
-
-        {/* <img src="https://media.istockphoto.com/id/1305037131/vector/retro-banner-welcome-on-purple-backdrop-light-effect-bright-star-vector-design-banner-game.jpg?s=612x612&w=0&k=20&c=6PjrrvWdU6jSXw3amZqeZr7LGhlWHS-XdRfNx36Y6u8=" alt="welcome image" className="welcomeBanner"></img> */}
+        <div className={styles.flexContainer}>
+          <div>
+            <h1>{displayTitle && uppercaseTernary}</h1>
+            <h2>Explore trending movies, choose your favourite</h2>
+          </div>
+            <Link className="button" href="/movies">
+                Start Exploring
+            </Link>.
+        </div>
+        <div className={styles.bannerContainer}>
+          <Image
+            src='/old-film-banner.jpeg'
+            alt="old film banner image"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </>
   )
 }
