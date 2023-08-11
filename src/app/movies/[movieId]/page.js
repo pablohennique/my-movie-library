@@ -1,10 +1,12 @@
 import { fetchMovie } from '../../../lib/tmdb'
 import { notFound } from 'next/navigation'
 import styles from './page.module.css'
+import { MoviePoster } from '../../../components/movie-poster'
 
 export default async function MoviePage({ params }) {
   const apiResponse = await fetchMovie(params.movieId)
   const movie = apiResponse.content
+  const posterPath = `https://image.tmdb.org/t/p/w300${movie.poster_path}`
   // const error = apiResponse.error
 
   if (movie === null) {
@@ -24,7 +26,7 @@ export default async function MoviePage({ params }) {
             <h3>Overview</h3>
             <p>{movie.overview}</p>
           </div>
-            <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} className={styles.poster}></img>
+            <MoviePoster posterPath={posterPath}/>
         </div>
     </>
   )
