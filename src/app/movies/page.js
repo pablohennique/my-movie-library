@@ -1,5 +1,6 @@
 import { MovieList } from '../../components/movie-list'
 import { fetchPopularMovies } from '../../lib/tmdb'
+import styles from './page.module.css'
 
 export const metadata = {
   title: 'Popular Movies',
@@ -25,19 +26,21 @@ export default async function MoviesPage() {
 
   return (
     <>
-      <h1>Popular Movies</h1>
+      <div className={styles.headers}>
+        <h1>Popular Movies</h1>
 
-      <h2>Here is a list of popular movies:</h2>
+        <h2>Here is a list of popular movies:</h2>
+      </div>
 
-      {callSuccess ? (
-        <MovieList movies={movies} />
-      ) : (
-        <p>{`Error: ${error}`}</p>
-      )}
+        {callSuccess ? (
+          <MovieList movies={movies} />
+          ) : (
+            <p>{`Error: ${error}`}</p>
+            )}
 
-      <p>
-        {hasMoreMovies && <a href={`https://${domain}/`} className="button">See more</a>}
-      </p>
+        <p>
+          {hasMoreMovies && <a href={`https://${domain}/`} className="button">See more</a>}
+        </p>
     </>
   )
 }

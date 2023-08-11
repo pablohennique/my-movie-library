@@ -16,6 +16,7 @@
 @media (max-width: 768px) {
   .movieListItem {
     width: 250px;
+    white-space: break-spaces;
   }
 }
 

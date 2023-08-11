@@ -1,0 +1,9 @@
+.headers {
+
+}
+
+@media (max-width: 768px) {
+  .headers {
+    margin: -20px -100px;
+  }
+}
