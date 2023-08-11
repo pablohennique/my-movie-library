@@ -11,5 +11,7 @@
 @media (max-width: 768px) {
   .movieList {
     grid-template-columns: 1fr;
+    margin-left: -50px;
   }
+
 }

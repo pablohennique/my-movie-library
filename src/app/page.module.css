@@ -7,16 +7,16 @@
 }
 
 .landingTitle h1 {
-  color: #d6d6d6;
+  color: white;
 }
 
 .landingTitle h2 {
-  color: #d6d6d6;
+  color: white;
 }
 
 .landingContainer {
   background-image:
-    linear-gradient(to bottom, rgba(39, 39, 39, 0.7),transparent),
+    linear-gradient(to bottom, rgba(18, 18, 18, 0.7),transparent),
     url('../../public/old-film-banner.jpeg');
   background-size: cover;
   background-position: center;
@@ -33,7 +33,7 @@
 
 .landingButton {
   text-decoration: none;
-  color: #d6d6d6;
+  color: white;
   background: #2C3231ae;
   border: 1px solid #7c7c7c;
   padding: 10px 20px;

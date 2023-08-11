@@ -13,6 +13,12 @@
   width: 500px;
 }
 
+@media (max-width: 768px) {
+  .movieListItem {
+    width: 250px;
+  }
+}
+
 .movieListItem p {
   padding-left: 20px;
 }
