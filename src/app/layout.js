@@ -2,12 +2,12 @@ import './globals.css'
 // import './movie-list.css'
 import styles from './layout.module.css'
 import { Inter } from 'next/font/google'
-import { Open_Sans } from 'next/font/google'
+import { Libre_Baskerville } from 'next/font/google'
 import { NavMenu } from '../components/nav-menu'
 import { ThemeSwitch } from '@/components/theme-switch'
 
 const inter = Inter({ subsets: ['latin'] })
-const openSans = Open_Sans({ subsets: ['latin']})
+const libreBaskerville = Libre_Baskerville({ subsets: ['latin'], weight: '400'})
 
 export const metadata = {
   title: {
@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
       <html lang="en">
-        <body className={`${openSans.className} ${styles.rootLayout}`}>
+        <body className={`${libreBaskerville.className} ${styles.rootLayout}`}>
           <header>
             <NavMenu />
             <ThemeSwitch />
