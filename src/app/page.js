@@ -5,28 +5,20 @@ import styles from './page.module.css'
 export default function HomePage() {
   const appTitle = 'Welcome To The Movie Library'
   const displayTitle = true
-  const uppercaseTitle = false
+  const uppercaseTitle = true
   const uppercaseTernary = uppercaseTitle ? appTitle.toUpperCase() : appTitle
 
   return (
-      <>
-        <div className={styles.flexContainer}>
+      <div className={`${styles.landingContainer} ${styles.negativeMargin}`}>
+        <div className={styles.landingTitle}>
           <div>
             <h1>{displayTitle && uppercaseTernary}</h1>
-            <h2>Explore trending movies, choose your favourite</h2>
+            <h2 className='hidden'>Explore trending movies, choose your favourite</h2>
           </div>
-            <Link className="button" href="/movies">
-                Start Exploring
-            </Link>.
+            <Link className={styles.landingButton} href="/movies">
+                EXPLORE MOVIES
+            </Link>
         </div>
-        <div className={styles.bannerContainer}>
-          <Image
-            src='/old-film-banner.jpeg'
-            alt="old film banner image"
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
-      </>
+    </div>
   )
 }
