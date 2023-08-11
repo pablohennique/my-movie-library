@@ -8,6 +8,8 @@ export default function AboutPage() {
     <>
       <h1>About</h1>
       <p>This app was created with React and Next.js</p>
+      <p>Created by Pablo Hennique</p>
+      <p>phennique@gmail.com</p>
     </>
   )
 }

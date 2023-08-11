@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
 
           <footer>
             <p>
-              Powered by React+Next.js | Created by Pablo Hennique
+              My Movie Library is Powered by React+Next.js
             </p>
           </footer>
 
