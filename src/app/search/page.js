@@ -22,7 +22,7 @@ export default function SearchPage() {
   }
 
   return (
-    <>
+    <div className={styles.container}>
       <h1>Search Movies</h1>
 
       <form className={styles.searchForm} onSubmit={handleSubmit}>
@@ -39,6 +39,6 @@ export default function SearchPage() {
       {loading && <p>Loading...</p>}
       {error && <p>There was an error calling the API</p>}
       {movies && <MovieList movies={movies} />}
-    </>
+    </div>
   )
 }

@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
 
           <footer>
             <p>
-              My Movie Library is Powered by React+Next.js
+              Powered by React+Next.js
             </p>
           </footer>
 
