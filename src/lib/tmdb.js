@@ -1,11 +1,11 @@
 export function fetchPopularMovies() {
-  const apiKey = process.env.TMDB_API_KEY
+  const apiKey = process.env.NEXT_PUBLIC_TMDB_API_KEY
   const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`
   return fetchPopular(url)
 }
 
 export async function fetchPopularPeople() {
-  const apiKey = process.env.TMDB_API_KEY
+  const apiKey = process.env.NEXT_PUBLIC_TMDB_API_KEY
   const url = `https://api.themoviedb.org/3/person/popular?api_key=${apiKey}`
   return fetchPopular(url)
 }
@@ -29,7 +29,7 @@ export async function fetchPopular(url) {
 }
 
 export async function fetchMovie(movieId) {
-  const apiKey = process.env.TMDB_API_KEY
+  const apiKey = process.env.NEXT_PUBLIC_TMDB_API_KEY
   const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`
   try {
     const res = await fetch(url)
@@ -43,5 +43,20 @@ export async function fetchMovie(movieId) {
   } catch(err) {
     console.error(err)
     return { content: null, success: false, error: "API could not be reached" }
+  }
+}
+
+export async function searchMovies(query) {
+  const apiKey = process.env.NEXT_PUBLIC_TMDB_API_KEY
+  const encodedQuery = encodeURIComponent(query)
+  const url = `https://api.themoviedb.org/3/search/movie?query=${encodedQuery}&api_key=${apiKey}`
+  try {
+    const res = await fetch(url)
+    if (res.status != 200) return null
+    const data = await res.json()
+    return data.results
+  } catch ({err}) {
+    console.error(err)
+    return null
   }
 }
