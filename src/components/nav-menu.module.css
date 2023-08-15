@@ -17,6 +17,10 @@
   color: #2C3231;
 }
 
+.navMenu li a span {
+  width: 50px;
+}
+
 :global(.dark) .navMenu li a {
   color: white;
 }
