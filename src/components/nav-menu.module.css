@@ -24,3 +24,35 @@
 :global(.dark) .navMenu li a {
   color: white;
 }
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+  transition: transform 0.3s;
+}
+
+.burgerMenu {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.navbarLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  visibility: hidden;
+}
+
+.navbarLinks.open {
+  display: flex;
+  visibility: none;
+}
+
+.container {
+  text-align: center;
+}
