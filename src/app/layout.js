@@ -28,11 +28,11 @@ export default function RootLayout({ children }) {
 
           <main>{children}</main>
 
-          {/* <footer>
+          <footer>
             <p>
               Powered by React+Next.js
             </p>
-          </footer> */}
+          </footer>
 
         </body>
       </html>
