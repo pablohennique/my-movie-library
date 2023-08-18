@@ -1,9 +1,14 @@
 'use client'
 import { useState } from 'react'
+import { useEffect } from 'react'
 import styles from './theme-switch.module.css'
 
 export function ThemeSwitch() {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
+
+  useEffect(() => {
+    {theme === 'dark' && document.body.classList.add('dark')}
+  })
 
   return (
     <button
@@ -17,7 +22,7 @@ export function ThemeSwitch() {
         }
       }}
       className={styles.themeSwitch}
-    >
+      >
       {theme === 'light' ? 'Light' : 'Dark'}
     </button>
   )

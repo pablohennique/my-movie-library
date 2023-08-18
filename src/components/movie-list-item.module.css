@@ -50,6 +50,11 @@
   border-radius: 8px;
 }
 
+:global(.dark) .clickable:hover {
+  background-color: #202020; /* Slightly lighter background color on hover */
+  box-shadow: 0 2px 5px rgba(170, 169, 169, 0.5);
+}
+
 .featured {
   font-weight: bold;
 }

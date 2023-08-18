@@ -21,7 +21,6 @@ h2 {
     background-color: #305b96;
     border: none;
     padding: 10px 20px;
-    text-align: center;
     display: inline-block;
     margin: 4px 2px;
     cursor: pointer;
@@ -31,6 +30,7 @@ h2 {
     justify-content: center;
     text-align: center;
     align-items: center;
+    width: 100px;
 }
 
 .button:hover {
@@ -48,7 +48,7 @@ body.dark {
 }
 
 body.dark h1 {
-  color: #f87171;
+  color: #FFFFFF;
 }
 
 body.dark h2 {

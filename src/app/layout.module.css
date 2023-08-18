@@ -16,7 +16,7 @@
 }
 
 .rootLayout > header {
-  border-bottom: 1px solid lightgray;
+  border-bottom: .5px solid lightgray;
   padding: 12px;
   display: flex;
   justify-content: space-between;
@@ -26,10 +26,10 @@
 .rootLayout > footer {
   display: flex;
   justify-content: center;
-  border-top: 1px solid lightgray;
+  border-top: .5px solid lightgray;
   padding: 12px;
 }
 
 :global(.dark).rootLayout > main {
-  background-color: #0C1223;
+  background-color: #121415;
 }
