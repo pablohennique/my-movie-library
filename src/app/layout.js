@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import { Libre_Baskerville } from 'next/font/google'
 import { NavMenu } from '../components/nav-menu'
 import { ThemeSwitch } from '@/components/theme-switch'
+import { headers } from 'next/headers';
 
 const inter = Inter({ subsets: ['latin'] })
 const libreBaskerville = Libre_Baskerville({ subsets: ['latin'], weight: '400'})
@@ -18,6 +19,9 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const headersList = headers();
+  const header_url = headersList.get('x-url') || "";
+  console.log(header_url);
   return (
       <html lang="en">
         <body className={`${libreBaskerville.className} ${styles.rootLayout}`}>
@@ -28,11 +32,11 @@ export default function RootLayout({ children }) {
 
           <main>{children}</main>
 
-          {/* <footer>
+          <footer>
             <p>
               Powered by React+Next.js
             </p>
-          </footer> */}
+          </footer>
 
         </body>
       </html>
