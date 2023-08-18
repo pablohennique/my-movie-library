@@ -5,7 +5,6 @@ import { useState } from 'react'
 import { searchMovies } from '@/lib/tmdb'
 import { MovieList } from '@/components/movie-list'
 
-
 export default function SearchPage() {
   const [query, setQuery] = useState('')
   const [movies, setMovies] = useState(null)
