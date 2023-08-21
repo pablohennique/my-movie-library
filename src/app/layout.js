@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import { Inter } from 'next/font/google'
 import { Libre_Baskerville } from 'next/font/google'
 import { NavMenu } from '../components/nav-menu'
-import { ThemeSwitch } from '@/components/theme-switch'
+import { ThemeSwitch } from '../components/theme-switch'
 
 const inter = Inter({ subsets: ['latin'] })
 const libreBaskerville = Libre_Baskerville({ subsets: ['latin'], weight: '400'})
