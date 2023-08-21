@@ -22,14 +22,13 @@
   background-position: center;
   background-repeat: no-repeat;
   /* height: 86vh; */
-  height: 95vh;
+  height: 100vh;
   top: 0; left: 0;
   text-align: center;
-
 }
 
 .negativeMargin {
-  margin: -30px -128px;
+  margin: -107px -128px -30px -128px;
 }
 
 .landingButton {

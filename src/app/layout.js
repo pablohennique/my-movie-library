@@ -3,8 +3,7 @@ import './globals.css'
 import styles from './layout.module.css'
 import { Inter } from 'next/font/google'
 import { Libre_Baskerville } from 'next/font/google'
-import { NavMenu } from '../components/nav-menu'
-import { ThemeSwitch } from '../components/theme-switch'
+import { BurgerMenu } from '../components/burger-menu'
 
 const inter = Inter({ subsets: ['latin'] })
 const libreBaskerville = Libre_Baskerville({ subsets: ['latin'], weight: '400'})
@@ -22,8 +21,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className={`${libreBaskerville.className} ${styles.rootLayout}`}>
           <header>
-            <NavMenu />
-            <ThemeSwitch />
+            <BurgerMenu />
           </header>
 
           <main>{children}</main>

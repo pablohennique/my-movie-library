@@ -21,6 +21,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* display: none; */
 }
 
 .rootLayout > footer {
@@ -33,3 +34,11 @@
 :global(.dark).rootLayout > main {
   background-color: #0F1628;
 }
+
+/* :global(.navMenuHidden).rootLayout > header {
+  display: none;
+} */
+/*
+:global(.navMenuHidden) .dynamicNavBar {
+  display: none;
+} */
