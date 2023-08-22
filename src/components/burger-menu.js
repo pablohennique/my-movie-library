@@ -7,7 +7,7 @@ import { ThemeSwitch } from "./theme-switch"
 import styles from './burger-menu.module.css'
 
 export function BurgerMenu() {
-  const burgerMenuIcon = <FontAwesomeIcon icon={faBars} size='2xl' style={{color: "#F9B339", }} />
+  const burgerMenuIcon = <FontAwesomeIcon icon={faBars} size='2xl' style={{color: "#f8a61a", }} />
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const menuShown = () => {
     setIsMenuOpen(true)

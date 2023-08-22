@@ -1,13 +1,15 @@
 .themeSwitch {
   position: absolute;
   top: 50%;
-  right: 40px;
+  right: 50px;
   transform: translate(-50%, -50%);
   border: 1px solid lightgray;
   cursor: pointer;
   background-color: transparent;
   border-radius: 6px;
   padding: 6px 10px;
+  color: var(--second-color);
+  text-transform: uppercase;
 }
 
 :global(.dark) .themeSwitch {

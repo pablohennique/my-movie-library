@@ -6,6 +6,14 @@ export function ThemeSwitch() {
   const [theme, setTheme] = useState('light')
 
   useEffect(() => {
+    const storedTheme = localStorage.getItem('theme')
+    if (storedTheme) {
+      setTheme(storedTheme)
+      // console.log(storedTheme);
+    }
+  }, [])
+
+  useEffect(() => {
     if (theme === 'dark') {
       document.body.classList.add('dark')
     } else {
@@ -13,13 +21,6 @@ export function ThemeSwitch() {
     }
     localStorage.setItem('theme', theme)
   }, [theme])
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme')
-    if (storedTheme) {
-      setTheme(storedTheme)
-    }
-  }, [])
 
   return (
     <button

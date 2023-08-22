@@ -22,7 +22,7 @@
 
 .navMenu li a {
   text-decoration: none;
-  color: #2C3231;
+  color: var(--second-color);
 }
 
 .navMenu li a span {

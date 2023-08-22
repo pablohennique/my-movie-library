@@ -15,15 +15,6 @@
   /* align-items: center; */
 }
 
-.rootLayout > header {
-  border-bottom: .5px solid lightgray;
-  padding: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* display: none; */
-}
-
 .rootLayout > footer {
   display: flex;
   justify-content: center;

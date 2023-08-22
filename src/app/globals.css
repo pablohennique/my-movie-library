@@ -2,8 +2,13 @@
 background-color: rgb(224, 224, 224);
 } */
 
+:root {
+  --main-color: #f8a61a;
+  --second-color: #515e70;
+}
+
 h1 {
-  color: #2C3231;
+  color: var(--main-color);
 }
 
 a {
@@ -12,13 +17,13 @@ a {
 }
 
 h2 {
-  color: #64748B;
+  color: var(--second-color);
 }
 
 .button {
     text-decoration: none;
     color: #F8F8F8;
-    background-color: #305b96;
+    background-color: var(--main-color);
     border: none;
     padding: 10px 20px;
     display: inline-block;
