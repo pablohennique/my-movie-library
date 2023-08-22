@@ -21,6 +21,7 @@ export function NavMenu() {
         <li>
           <Link href="/about">About</Link>
         </li>
+        <span>|</span>
         <li className={styles.searchIcon}>
           <Link href='/search'>{searchIcon}</Link>
         </li>
