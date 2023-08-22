@@ -2,12 +2,15 @@
   display: block;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 128px;
+  padding: 60px 128px 60px 128px;
   color: white;
 }
 
 .landingTitle h1 {
   color: white;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: -20px;
 }
 
 .landingTitle h2 {
@@ -16,19 +19,18 @@
 
 .landingContainer {
   background-image:
-    linear-gradient(to bottom, rgba(18, 18, 18, 0.7),transparent),
+    linear-gradient(to bottom, rgba(18, 18, 18, .85),transparent),
     url('../../public/old-film-banner-lite.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* height: 86vh; */
-  height: 100vh;
+  height: 104vh;
   top: 0; left: 0;
   text-align: center;
 }
 
 .negativeMargin {
-  margin: -107px -128px -30px -128px;
+  margin: -62px -128px -30px -128px;
 }
 
 .landingButton {

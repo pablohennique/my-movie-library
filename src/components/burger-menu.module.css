@@ -1,8 +1,18 @@
 .navBarComplete {
-  padding-left: 20px;
-  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-evenly; */
   align-items: center;
-  z-index: 9999;
+}
+
+.navBarComplete svg {
+  margin: 20px 40px;
+}
+
+:global(.swipeDown) .navBarComplete {
+  background-color: white;;
+  border-bottom: .5px solid lightgray;
 }

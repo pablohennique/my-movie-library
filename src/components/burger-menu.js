@@ -2,25 +2,29 @@
 import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { NavMenuWithLight } from './nav-menu-with-light'
+import { NavMenu } from "./nav-menu"
+import { ThemeSwitch } from "./theme-switch"
 import styles from './burger-menu.module.css'
 
 export function BurgerMenu() {
-  const burgerMenu = <FontAwesomeIcon icon={faBars} size='2xl' style={{color: "#F9B339", }} />
+  const burgerMenuIcon = <FontAwesomeIcon icon={faBars} size='2xl' style={{color: "#F9B339", }} />
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const handleHover = () => {
-    setIsMenuOpen(!isMenuOpen)
+  const menuShown = () => {
+    setIsMenuOpen(true)
+    document.body.classList.add('swipeDown')
+  }
+  const menuHidden = () => {
+    setIsMenuOpen(false)
+    document.body.classList.remove('swipeDown')
   }
 
-  // document.body.classList.toggle('navMenuHidden')
-
   return(
-    <div
-      className={styles.navBarComplete}
-      onMouseEnter={handleHover} onMouseLeave={handleHover}
-    >
-      {burgerMenu}
-      {isMenuOpen && <NavMenuWithLight />}
+    <div className={styles.navBarComplete} onMouseLeave={menuHidden}>
+      <div onMouseEnter={menuShown} >
+        {burgerMenuIcon}
+      </div>
+      {isMenuOpen && <NavMenu />}
+      {isMenuOpen && <ThemeSwitch />}
     </div>
   )
 }
