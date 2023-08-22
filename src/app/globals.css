@@ -5,10 +5,14 @@ background-color: rgb(224, 224, 224);
 :root {
   --main-color: #f8a61a;
   --second-color: #515e70;
+  --grey-color: #e6e6e6;
+
 }
 
 h1 {
   color: var(--main-color);
+  margin-bottom: -20px;
+  padding-top: 20px;
 }
 
 a {
@@ -17,6 +21,10 @@ a {
 }
 
 h2 {
+  color: var(--second-color);
+}
+
+p {
   color: var(--second-color);
 }
 
@@ -36,6 +44,7 @@ h2 {
     text-align: center;
     align-items: center;
     width: 100px;
+    font-size: 20px;
 }
 
 .button:hover {
@@ -52,16 +61,16 @@ body.dark {
   color: white;
 }
 
-body.dark h1 {
+/* body.dark h1 {
   color: #FFFFFF;
-}
+} */
 
 body.dark h2 {
   color: rgb(198, 198, 198);
 }
 
 body.dark a {
-  color: white;
+  color: rgb(198, 198, 198);
 }
 
 .hidden {

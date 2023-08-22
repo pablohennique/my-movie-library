@@ -13,7 +13,7 @@ export default function HomePage() {
         <div className={styles.landingTitle}>
           <div>
             <h1>{displayTitle && uppercaseTernary}</h1>
-            <h2 className=''>GET READY FOR MOVIE NIGHT</h2>
+            <h2 className=''>Get ready for movie night</h2>
           </div>
             <Link className={styles.landingButton} href="/movies">
                 EXPLORE MOVIES
