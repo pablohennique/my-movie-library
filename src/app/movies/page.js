@@ -29,7 +29,7 @@ export default async function MoviesPage() {
       <div className={styles.headers}>
         <h1>Popular Movies</h1>
 
-        <h2>Here is a list of popular movies:</h2>
+        <h2>Explore currently trending movies</h2>
       </div>
 
         {callSuccess ? (

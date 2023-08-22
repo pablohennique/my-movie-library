@@ -6,21 +6,13 @@
 }
 
 .rootLayout > main {
-  padding: 30px 128px;
+  padding: 35px 128px;
   flex: 1;
   background-color: #F8FAFC;
   /* width: 100%; */
   /* display: flex; */
   /* flex-direction: column; */
   /* align-items: center; */
-}
-
-.rootLayout > header {
-  border-bottom: .5px solid lightgray;
-  padding: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .rootLayout > footer {
@@ -33,3 +25,11 @@
 :global(.dark).rootLayout > main {
   background-color: #0F1628;
 }
+
+/* :global(.navMenuHidden).rootLayout > header {
+  display: none;
+} */
+/*
+:global(.navMenuHidden) .dynamicNavBar {
+  display: none;
+} */

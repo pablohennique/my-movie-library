@@ -4,13 +4,14 @@
 
 .searchForm {
   display: flex;
-  gap: 4px;
   align-items: baseline;
+  margin-top: 25px;
 }
 
 .searchForm input {
-  padding: 4px;
-  font-size: 1em;
+  padding: 8px;
+  color: var(--second-color);
+  font-size: 1.2em;
   border: 1px solid lightgray;
   border-radius: 4px;
 }

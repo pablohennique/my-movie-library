@@ -3,11 +3,16 @@ import './globals.css'
 import styles from './layout.module.css'
 import { Inter } from 'next/font/google'
 import { Libre_Baskerville } from 'next/font/google'
-import { NavMenu } from '../components/nav-menu'
-import { ThemeSwitch } from '../components/theme-switch'
+import { Playfair_Display } from 'next/font/google'
+import { Source_Sans_3 } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
+import { BurgerMenu } from '../components/burger-menu'
 
 const inter = Inter({ subsets: ['latin'] })
 const libreBaskerville = Libre_Baskerville({ subsets: ['latin'], weight: '400'})
+const playfairDisplay = Playfair_Display({ subsets: ['latin'], weight: '400'})
+const sourceSans = Source_Sans_3({ subsets: ['latin'], weight: '400'})
+const jetBrans = JetBrains_Mono({ subsets: ['latin'], weight: '400'})
 
 export const metadata = {
   title: {
@@ -20,13 +25,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
       <html lang="en">
-        <body className={`${libreBaskerville.className} ${styles.rootLayout}`}>
-          <header>
-            <NavMenu />
-            <ThemeSwitch />
-          </header>
+        <body className={`${jetBrans.className} ${styles.rootLayout}`}>
+          {/* <header>
 
-          <main>{children}</main>
+          </header> */}
+
+          <main>
+            <BurgerMenu />
+            {children}
+          </main>
 
           <footer>
             <p>

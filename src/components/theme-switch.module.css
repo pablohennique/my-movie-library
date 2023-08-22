@@ -1,9 +1,16 @@
 .themeSwitch {
-  border: 1px solid lightgray;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--second-color);
   cursor: pointer;
   background-color: transparent;
   border-radius: 6px;
-  padding: 4px 8px;
+  padding: 6px 10px;
+  margin-top: 9px;
+  color: var(--second-color);
+  text-transform: uppercase;
 }
 
 :global(.dark) .themeSwitch {
