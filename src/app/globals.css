@@ -6,7 +6,7 @@ background-color: rgb(224, 224, 224);
   --main-color: #f8a61a;
   --second-color: #515e70;
   --grey-color: #e6e6e6;
-
+  --dark-color: #121212;
 }
 
 h1 {
@@ -56,10 +56,10 @@ p {
   color: white;
 }
 
-body.dark {
+/* body.dark {
   background-color: black;
   color: white;
-}
+} */
 
 /* body.dark h1 {
   color: #FFFFFF;
@@ -70,7 +70,11 @@ body.dark h2 {
 }
 
 body.dark a {
-  color: rgb(198, 198, 198);
+  color: var(--dark-color);
+}
+
+body.dark p {
+  color: var(--grey-color);
 }
 
 .hidden {

@@ -25,5 +25,5 @@
 } */
 
 :global(.swipeDown.dark) .navBarComplete {
-  background-color: black;
+  background-color: var(--dark-color);
 }
