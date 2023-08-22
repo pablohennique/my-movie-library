@@ -7,7 +7,7 @@
 
 .landingTitle h1 {
   letter-spacing: 2px;
-  color: var(--grey-color);
+  color: var(--main-color);
   font-size: 40px;
   font-weight: bold;
   margin-bottom: -20px;
@@ -33,29 +33,6 @@
 .negativeMargin {
   margin: -62px -128px -30px -128px;
 }
-
-/* .landingButton {
-  text-decoration: none;
-  color: var(--grey-color);
-  background: #f8a71a87;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  border: 2px solid var(--grey-color);
-  padding: 10px 20px;
-  text-align: center;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-  height: 20px;
-  width: 200px;
-  transition: all 0.3s ease;
-}
-
-.landingButton:hover {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
-  background: #f8a71add;
-  border: 2px solid #f8a71a8a;
-} */
 
 @media (max-width: 768px) {
   .landingTitle {
@@ -107,3 +84,26 @@
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
 }
+
+/* .landingButton {
+  text-decoration: none;
+  color: var(--grey-color);
+  background: #f8a71a87;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--grey-color);
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 20px;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.landingButton:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+  background: #f8a71add;
+  border: 2px solid #f8a71a8a;
+} */

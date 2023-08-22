@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export function NavMenu() {
-  const searchIcon = <FontAwesomeIcon icon={faSearch} style={{color: "#515e70", width: '20px'}} />
+  const searchIcon = <FontAwesomeIcon icon={faSearch} style={{color: "#515e70", width: '20px', }} />
 
   return (
     <nav className={styles.navMenu}>
@@ -21,7 +21,7 @@ export function NavMenu() {
         <li>
           <Link href="/about">About</Link>
         </li>
-        <li>
+        <li className={styles.searchIcon}>
           <Link href='/search'>{searchIcon}</Link>
         </li>
       </ul>
