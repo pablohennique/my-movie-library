@@ -39,3 +39,11 @@
 :global(.dark) .navMenu li a {
   color: white;
 }
+
+:global(.dark) .navMenu span {
+  color: white;
+}
+
+:global(.dark) .searchIcon a {
+  color: white;
+}

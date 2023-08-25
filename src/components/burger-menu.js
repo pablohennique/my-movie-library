@@ -42,8 +42,8 @@ export function BurgerMenu() {
     }
   }, [isMouseOn])
 
-  console.log(`is mouse on:${isMouseOn}`);
-  console.log(`is menu open:${isMenuOpen}`);
+  // console.log(`is mouse on:${isMouseOn}`);
+  // console.log(`is menu open:${isMenuOpen}`);
 
   return(
     <div className={styles.navBarComplete}

@@ -8,31 +8,7 @@ const delay = (ms) => new Promise((r) => setTimeout(r, ms))
 export function MoviesSearchResult(queryObject) {
   let query = queryObject.query
 
-  const [movies, setMovies] = useState(null)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
-
-    useEffect(() => {
-      let isCurrent = true
-
-      setLoading(true)
-
-      const throttle = async () => {
-        await delay(300)
-        searchMovies(query).then((movies) => {
-          if (isCurrent) {
-            setMovies(movies)
-            setLoading(false)
-            movies === null ? setError(true) : setError(false)
-          }
-        })
-      }
-      throttle()
-
-      return() => {
-        isCurrent = false
-      }
-    }, [query])
+  const { movies, loading, error } = useMoviesFromQuery(query)
 
   return (
     <>
@@ -41,4 +17,35 @@ export function MoviesSearchResult(queryObject) {
       {movies && <MovieList movies={movies} />}
     </>
   )
+}
+
+function useMoviesFromQuery(query) {
+  const [movies, setMovies] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
+
+
+  useEffect(() => {
+    let isCurrent = true
+
+    setLoading(true)
+
+    const throttle = async () => {
+      await delay(300)
+      searchMovies(query).then((movies) => {
+        if (isCurrent) {
+          setMovies(movies)
+          setLoading(false)
+          movies === null ? setError(true) : setError(false)
+        }
+      })
+    }
+    throttle()
+
+    return() => {
+      isCurrent = false
+    }
+  }, [query])
+
+  return { movies, loading, error }
 }
