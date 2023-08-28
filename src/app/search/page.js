@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './page.module.css'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { MoviesSearchResult } from '../../components/movies-search-results'
 
 export default function SearchPage() {

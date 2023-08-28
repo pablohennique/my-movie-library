@@ -14,5 +14,19 @@ export function useLocalStorageState(key, initialValue) {
     localStorage.setItem(key, value)
   }, [key, value])
 
+  const [] = useTheme(value)
+
   return [value, setValue]
+}
+
+
+export function useTheme(theme) {
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.body.classList.add('dark')
+    } else {
+      document.body.classList.remove('dark')
+    }
+  }, [theme])
+  return theme
 }

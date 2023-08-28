@@ -1,18 +1,10 @@
 'use client'
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import { useLocalStorageState } from '../lib/hooks'
 import styles from './theme-switch.module.css'
 
 export function ThemeSwitch() {
   const [theme, setTheme] = useLocalStorageState('theme', 'light')
-
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.body.classList.add('dark')
-    } else {
-      document.body.classList.remove('dark')
-    }
-  }, [theme])
 
   return (
     <button
